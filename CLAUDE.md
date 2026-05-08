@@ -485,3 +485,54 @@ default Expo / RN platform conventions and apply to all CTA-App-N work.
    updates with it; the Worker repo is the single source of truth.
    Source decision: original `congress-trade-mobile/src/api/types.ts`
    header.
+
+9. **Brand positioning.** Source: original
+   `congress_trade_alerts_app/assets/dashboard_mobile.html`
+   (Flutter-WebView prototype that predated this Expo rebuild;
+   project retired 2026-05-08).
+   - Product name: `Congress Trade Alerts — STOCK Act Disclosure Tracker`
+   - Meta description: `Track congressional stock trades. Public STOCK Act disclosures, enriched with market data.`
+   - Sub-tagline shown beneath the app name: `STOCK Act Disclosure Tracker`
+
+10. **Pro tier -- $9/mo, four features.** The canonical $9/mo
+    positioning + four-bullet feature list + CTA button copy. Source:
+    `congress_trade_alerts_app/assets/dashboard_mobile.html` lines 199-207.
+    - Real-time alerts (Telegram + Email)
+    - Custom watchlists
+    - Full trade history & search
+    - Copy-trade performance data
+    - CTA button: `Start Free Trial`
+
+11. **Disclaimer text -- must appear in app About / Footer / Settings.**
+    Source: `congress_trade_alerts_app/assets/dashboard_mobile.html`
+    lines 211-213. Copy:
+    > Public STOCK Act data only. Not financial advice. Trades shown
+    > are from official congressional disclosures filed with the House
+    > Clerk and Senate EFD. For transparency and accountability
+    > purposes only.
+
+12. **Share template -- canonical for shareable trade cards.** Hashtags
+    `#CongressTrading #StockAct` and brand-domain attribution
+    `Source: CongressTradeAlerts.com` are part of the locked share
+    string. Source: `congress_trade_alerts_app/assets/dashboard_mobile.html`
+    line 661. Template (JS template-literal; `\n` render as real
+    newlines):
+    ```
+    🏛️ ${name} traded ${ticker} — ${amount}\nSource: CongressTradeAlerts.com\n#CongressTrading #StockAct
+    ```
+
+13. **CSV export field order -- locked once shipped** (power users will
+    script against this). Source:
+    `congress_trade_alerts_app/assets/dashboard_mobile.html` line 627.
+    Field order:
+    ```
+    id,politician,party,chamber,state,ticker,asset_name,tx_type,amount_range,trade_date,disclosure_date,disclosure_lag_days,current_price,price_change_pct
+    ```
+    Filename: `congress_trades.csv`.
+
+14. **Disclosure lag UX color thresholds** -- mirrors STOCK Act's
+    30-day statutory deadline with 14d as a warning band. Source:
+    `congress_trade_alerts_app/assets/dashboard_mobile.html` line 358.
+    - `> 30d` red
+    - `> 14d` yellow
+    - else gray
