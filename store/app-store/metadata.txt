@@ -1,13 +1,69 @@
-App Store Connect listing fields. Fill in CTA-App-1-10 with ASO copy.
-Per-field max lengths annotated. Privacy + URLs prefilled.
+App Store Connect listing fields. Filled by CTA-App-1-10. ASCII only
+per global ASCII rule. Char limits annotated; counts verified at write
+time. Prefix lines with the field label so Joe can paste each value
+into the matching ASC field. Body text under "DESCRIPTION (max 4000):"
+is the description verbatim.
 
-NAME (max 30):
-SUBTITLE (max 30):
-PROMOTIONAL_TEXT (max 170):
+NAME (max 30): Congress Trade Alerts
+SUBTITLE (max 30): Capitol Hill Stock Disclosures
+PROMOTIONAL_TEXT (max 170): Real-time alerts when members of Congress file STOCK Act disclosures. Subscribe to specific members and get notified the moment their trades hit the public record.
+
 DESCRIPTION (max 4000):
-KEYWORDS (max 100, comma-separated):
-PRIMARY_CATEGORY:
-SECONDARY_CATEGORY:
-SUPPORT_URL:
-MARKETING_URL:
+Congress Trade Alerts surfaces every stock trade disclosed under the STOCK Act by members of the US House and Senate -- drawn from official public records, with no opinions, no spin, and no guesswork.
+
+WHAT YOU GET
+- Live feed of every congressional stock trade as it's disclosed
+- Filter by individual member to follow specific Representatives or Senators
+- Push alerts when a member you follow files a new disclosure
+- Plain-language methodology so you know exactly where the data comes from and how it's processed
+- Clear flags when a trade is filed late (the STOCK Act requires disclosure within 45 days; we surface that lag)
+
+WHO IT'S FOR
+- Journalists tracking congressional compliance failures
+- Civic-engaged citizens watching their representatives' financial activity
+- Researchers studying public-record financial disclosure data
+
+DATA SOURCES
+- US House Clerk Periodic Transaction Reports (PTR)
+- US Senate Office of Public Records (Senate EFD)
+- Refreshed every 30 minutes from official filings
+
+PRIVACY
+- No user accounts required
+- No analytics or third-party tracking
+- Anonymous push tokens only -- we do not collect any personal data
+- Open source: github.com/freshcod3r/cta-app
+
+This app is not affiliated with the United States government or with any member of Congress. All data comes from public records that members of Congress are required by law to file under the Stop Trading on Congressional Knowledge Act of 2012.
+
+Free. No ads. Updated daily.
+
+KEYWORDS (max 100, comma-separated): congress,stock,trades,tracker,STOCK Act,disclosures,senate,house,politician,capitol,trading,alerts
+PRIMARY_CATEGORY: News
+SECONDARY_CATEGORY: Finance
+SUPPORT_URL: https://congresstradealerts.com
+MARKETING_URL: https://congresstradealerts.com
 PRIVACY_POLICY_URL: https://congresstradealerts.com/privacy
+COPYRIGHT: (c) 2026 Joe Crosen
+
+AGE_RATING_QUESTIONNAIRE_INPUTS:
+The ASC age-rating questionnaire computes the final rating from a
+multi-question form. Apple's questionnaire output decides the rating;
+the inputs below are documented so Joe can reproduce the answer set
+during submission. Expected outcome at these inputs is 12+ (driven by
+"Infrequent/Mild Mature/Suggestive Themes" being plausibly NO and the
+news-reporting nature triggering at most a 12+ default for unrestricted
+financial reporting context).
+
+- Frequent/Intense Mature or Suggestive Themes: NO
+- Frequent/Intense Realistic Violence: NO
+- Information about Gambling: NO
+- Frequent/Intense Cartoon or Fantasy Violence: NO
+- Unrestricted Web Access: NO
+- Gambling: NO
+- Sexual Content or Nudity: NO
+- Profanity or Crude Humor: NO
+- Alcohol, Tobacco, or Drug Use: NO
+- Mature/Suggestive Themes: NO
+- Horror/Fear Themes: NO
+- Medical/Treatment Information: NO

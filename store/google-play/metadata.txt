@@ -1,10 +1,60 @@
-Google Play Console listing fields. Fill in CTA-App-1-10 with ASO copy.
-Per-field max lengths annotated. Privacy URL prefilled.
+Google Play Console listing fields. Filled by CTA-App-1-10. ASCII only.
+Char limits annotated; counts verified at write time. Body text under
+"FULL_DESCRIPTION (max 4000):" is the description verbatim, formatted
+for Play's plain-text rendering (sentence-case section headers, no
+all-caps).
 
-APP_NAME (max 30):
-SHORT_DESCRIPTION (max 80):
+APP_NAME (max 30): Congress Trade Alerts
+SHORT_DESCRIPTION (max 80): Real-time STOCK Act alerts when Congress members file stock disclosures.
+
 FULL_DESCRIPTION (max 4000):
-PRIMARY_CATEGORY:
-CONTENT_RATING:
+Congress Trade Alerts surfaces every stock trade disclosed under the STOCK Act by members of the US House and Senate -- drawn from official public records, with no opinions, no spin, and no guesswork.
+
+What you get
+- Live feed of every congressional stock trade as it's disclosed
+- Filter by individual member to follow specific Representatives or Senators
+- Push alerts when a member you follow files a new disclosure
+- Plain-language methodology so you know exactly where the data comes from and how it's processed
+- Clear flags when a trade is filed late (the STOCK Act requires disclosure within 45 days; we surface that lag)
+
+Who it's for
+- Journalists tracking congressional compliance failures
+- Civic-engaged citizens watching their representatives' financial activity
+- Researchers studying public-record financial disclosure data
+
+Data sources
+- US House Clerk Periodic Transaction Reports (PTR)
+- US Senate Office of Public Records (Senate EFD)
+- Refreshed every 30 minutes from official filings
+
+Privacy
+- No user accounts required
+- No analytics or third-party tracking
+- Anonymous push tokens only -- we do not collect any personal data
+- Open source: github.com/freshcod3r/cta-app
+
+This app is not affiliated with the United States government or with any member of Congress. All data comes from public records that members of Congress are required by law to file under the Stop Trading on Congressional Knowledge Act of 2012.
+
+Free. No ads. Updated daily.
+
+PRIMARY_CATEGORY: News & Magazines
+SECONDARY_CATEGORY: Finance
+(Note: Play has a single primary category. "Finance" goes in the Tags
+field below, not as a true secondary category. ASC has true secondary;
+this field is for Joe's reference, NOT a paste target on Play.)
+
+CONTENT_RATING: Everyone
+(Final answer determined by Play's IARC questionnaire output. Inputs
+expected to return "Everyone" with no flags: no violence, no sexual
+content, no gambling, no profanity, no drug references, no
+user-generated content moderation surface. See data-safety-checklist.md
+for related answers.)
+
 PRIVACY_POLICY_URL: https://congresstradealerts.com/privacy
-SUPPORT_EMAIL:
+SUPPORT_EMAIL: congresstradealertsapp@gmail.com
+WEBSITE: https://congresstradealerts.com
+
+TAGS: civic-data, public-records, financial-disclosure, congress, stock-act
+(Play exposes 5 tags max per app at the time of submission; these align
+with the keywords in app-store/metadata.txt for ASO consistency across
+stores.)
