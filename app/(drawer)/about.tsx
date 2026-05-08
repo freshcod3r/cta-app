@@ -14,8 +14,8 @@ import { Linking, Pressable, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Constants from "expo-constants";
 
-const GITHUB_URL = "https://github.com/freshcod3r/cta-app";
-const WEB_URL = "https://congresstradealerts.com";
+import { GITHUB_URL, PRIVACY_URL, WEB_URL } from "@/lib/constants/links";
+
 const PRESS_EMAIL = "congresstradealertsapp@gmail.com";
 
 function openExternal(url: string) {
@@ -107,6 +107,10 @@ export default function AboutScreen() {
             Disable push from Settings to remove your token from the
             server entirely.
           </Para>
+          <LinkRow
+            label="Read the full privacy policy"
+            onPress={() => openExternal(PRIVACY_URL)}
+          />
         </Section>
 
         <Section title="Open source">

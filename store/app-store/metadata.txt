@@ -1,0 +1,13 @@
+App Store Connect listing fields. Fill in CTA-App-1-10 with ASO copy.
+Per-field max lengths annotated. Privacy + URLs prefilled.
+
+NAME (max 30):
+SUBTITLE (max 30):
+PROMOTIONAL_TEXT (max 170):
+DESCRIPTION (max 4000):
+KEYWORDS (max 100, comma-separated):
+PRIMARY_CATEGORY:
+SECONDARY_CATEGORY:
+SUPPORT_URL:
+MARKETING_URL:
+PRIVACY_POLICY_URL: https://congresstradealerts.com/privacy

@@ -1,0 +1,10 @@
+Google Play Console listing fields. Fill in CTA-App-1-10 with ASO copy.
+Per-field max lengths annotated. Privacy URL prefilled.
+
+APP_NAME (max 30):
+SHORT_DESCRIPTION (max 80):
+FULL_DESCRIPTION (max 4000):
+PRIMARY_CATEGORY:
+CONTENT_RATING:
+PRIVACY_POLICY_URL: https://congresstradealerts.com/privacy
+SUPPORT_EMAIL:
