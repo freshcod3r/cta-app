@@ -30,15 +30,37 @@ store/
       + Play Data Safety checklist.
 - [x] Asset capture briefs -- screenshots, feature graphic, app preview
       video.
-- [ ] Screenshots themselves -- Joe-side capture (8 shots per store
-      per `screenshots-brief.md`).
+- [x] **Designed-mockup screenshots (8 per store)** -- baked-in caption
+      strips at the brand color over a representative app surface, at
+      exact store dimensions (1290x2796 iOS, 1080x1920 Play). Generated
+      by `_generate_screenshots.py` (Pillow). These are preliminary
+      assets; Joe can swap real-device captures over them at any point
+      for higher fidelity. Both Apple and Play accept designed
+      screenshots as long as they accurately represent the app.
 - [ ] Feature graphic image -- Joe-side design (Play only, see
       `feature-graphic-brief.md`).
 - [ ] App preview video -- Joe-side capture (30s per
       `app-preview-brief.md`).
+- [ ] Real-device screenshots (optional fidelity upgrade) -- Joe-side
+      capture from a production EAS build, replacing the designed
+      mockups in place.
 - [ ] Real submit credentials -- substituted into `eas.json` only at
       `eas submit` time, never committed (see repo-root
       `submission-instructions.md`).
+
+## Regenerating the mockup screenshots
+
+`_generate_screenshots.py` is self-contained Python (Pillow only). Edit
+the `SHOTS` list or per-surface drawing functions and re-run from the
+repo root:
+
+```
+python store/_generate_screenshots.py
+```
+
+Outputs overwrite `store/app-store/screenshots/*.png` and
+`store/google-play/screenshots/*.png`. Brand tokens mirror
+`lib/theme/tokens.ts` and `tailwind.config.js`.
 
 ## Field length limits (Joe-reference)
 
