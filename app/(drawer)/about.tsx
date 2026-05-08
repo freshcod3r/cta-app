@@ -2,15 +2,21 @@
 // Constants.expoConfig.version so a `expo prebuild`-driven version
 // bump in app.json reflects automatically without code changes.
 //
-// Press contact email matches the /press surface on the web
-// (press@congresstradealerts.com per CTA-App-1-8 P3 probe).
+// Press contact email tracks the /press surface on the web. CTA-34
+// (2026-05-08) downgraded the brand-aligned press@congresstradealerts.com
+// to congresstradealertsapp@gmail.com because Cloudflare Email Routing
+// for press@ isn't wired yet (per CTA Worker repo's PRE_SEND_CHECKLIST
+// Phase 1 🟡). All three customer-facing surfaces (mobile About, web
+// /privacy, web /press) line up on this gmail value until Joe completes
+// the routing setup. When that happens, flip this constant + the two
+// CTA Worker constants in the same motion.
 import { Linking, Pressable, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Constants from "expo-constants";
 
 const GITHUB_URL = "https://github.com/freshcod3r/cta-app";
 const WEB_URL = "https://congresstradealerts.com";
-const PRESS_EMAIL = "press@congresstradealerts.com";
+const PRESS_EMAIL = "congresstradealertsapp@gmail.com";
 
 function openExternal(url: string) {
   Linking.openURL(url).catch(() => {
