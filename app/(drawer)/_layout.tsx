@@ -9,7 +9,7 @@
 // consistent global access (CTA-App-1-3 spec calls it out for Feed; placing
 // it at the drawer-level screenOptions covers all 4 destinations identically).
 import { Drawer } from "expo-router/drawer";
-import { Pressable, Alert } from "react-native";
+import { Pressable, Alert, useColorScheme } from "react-native";
 import {
   House,
   BookOpen,
@@ -17,10 +17,16 @@ import {
   Info,
   User,
 } from "lucide-react-native";
+import { ctaColors } from "@/lib/theme/tokens";
 
 const ICON_SIZE = 22;
 
+// CTA-App-1-4 fix: User icon was hardcoded to gray-700 which renders too dark
+// against a dark-mode header background. Resolve at runtime against the
+// device colorScheme so the icon stays legible in both modes.
 function AccountButton() {
+  const scheme = useColorScheme();
+  const tint = scheme === "dark" ? "#d1d5db" : "#374151"; // gray-300 / gray-700
   return (
     <Pressable
       accessibilityRole="button"
@@ -40,7 +46,7 @@ function AccountButton() {
         marginRight: 8,
       }}
     >
-      <User size={24} color="#374151" />
+      <User size={24} color={tint} />
     </Pressable>
   );
 }
@@ -50,7 +56,7 @@ export default function DrawerLayout() {
     <Drawer
       screenOptions={{
         headerRight: () => <AccountButton />,
-        drawerActiveTintColor: "#6366f1",
+        drawerActiveTintColor: ctaColors.accent,
       }}
     >
       <Drawer.Screen
