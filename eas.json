@@ -14,11 +14,15 @@
       "channel": "preview"
     },
     "production": {
+      "distribution": "store",
       "channel": "production",
-      "android": {
-        "buildType": "app-bundle"
+      "ios": {
+        "autoIncrement": "buildNumber"
       },
-      "autoIncrement": true
+      "android": {
+        "buildType": "app-bundle",
+        "autoIncrement": "versionCode"
+      }
     }
   },
   "submit": {
